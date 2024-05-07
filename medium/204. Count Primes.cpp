@@ -2,7 +2,9 @@ class Solution {
 public:
     int countPrimes(int n) {
 
-        //sieve of eratosthenes
+        //SIEVE OF ERATOSTHENES : :::::: : TIME COMPLEXITY=> N * ( LOG (LOG N) )
+
+        // PSEUDO:
         //declare linear array with all flags as positive(primes)
         //negate 0 and 1 because they are not primes(not required)
         //start from 2 since  its first prime and keep incrementing ans as we encounter positives
