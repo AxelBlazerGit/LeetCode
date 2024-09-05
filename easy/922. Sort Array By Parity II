@@ -1,0 +1,24 @@
+class Solution:
+    def sortArrayByParityII(self, nums: List[int]) -> List[int]:
+        parity0 = 0
+        ptr = 1
+        n = len(nums)
+        
+        while parity0 < n and ptr < n:
+            if nums[parity0] % 2 == 1 and nums[ptr] % 2 == 0:
+                nums[parity0], nums[ptr] = nums[ptr], nums[parity0]
+                parity0+=2
+                ptr+=2
+            elif nums[parity0]%2:
+                ptr+=2
+            else:
+                parity0+=2
+        
+            
+        return nums
+
+
+# 4 2 5 7 2 6 5 4 3 7 4 6 7 0 9
+# par=0=>+2
+# ptr=1=>+2
+# if par%2 and not ptr%2 then swap
