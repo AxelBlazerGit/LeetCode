@@ -1,0 +1,4 @@
+class Solution:
+    def maxNumberOfBalloons(self, text: str) -> int:
+        hash=Counter(text)
+        return min(hash['b'],hash['a'],hash['l']//2,hash['o']//2,hash['n'])
