@@ -25,10 +25,10 @@ class Solution:
             node.next=cur.next
             cur.next=node
             cur=node.next
-        if stack:
-            node=stack.pop()
-            node.next=cur.next
-            cur.next=node
+        # if stack:
+        #     node=stack.pop()
+        #     node.next=cur.next
+        #     cur.next=node
 # 1 2 3 4 5 6 7
 # 1 '7' 2 '6' 3 '5' 4
 
